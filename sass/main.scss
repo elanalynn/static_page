@@ -1,0 +1,252 @@
+$cpr-orange: #ff5a14;
+$cpr-white: #fff;
+$border-radius: 5px;
+
+@mixin flex($justify: space-between) {
+  display: flex;
+  justify-content: $justify;
+}
+
+@mixin author {
+  align-items: center;
+  font-size: 14px;
+
+  img {
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@mixin button {
+  border: none;
+  background-color: $cpr-orange;
+  color: $cpr-white;
+}
+
+body {
+  flex-direction: column;
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $cpr-orange;
+}
+
+ul {
+  list-style: none;
+}
+
+small {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+header {
+  .nav-first {
+    @include flex;
+    height: 42px;
+    background-color: #3e4451;
+    color: #fff;
+
+    .hamburger {
+      margin: 0.125rem 0 0 1rem;
+      padding-right: 1rem;
+      border-right: 1px solid #fff;
+    }
+
+    .nav-left,
+    .nav-left ul {
+      @include flex;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 700;
+
+      li {
+        padding: 0.75rem 1rem;
+        height: 100%;
+        border-right: 1px solid #fff;
+      }
+    }
+
+    .nav-right {
+      @include flex;
+      align-items: center;
+
+      .search {
+        width: 2rem;
+        height: 2rem;
+        margin: 0.5rem 0.5rem 0 0;
+      }
+
+      button {
+        @include button;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        box-shadow: none;
+        height: 42px;
+        width: 132px;
+
+        i {
+          margin: 0.25rem;
+        }
+      }
+    }
+  }
+
+  .nav-second ul {
+    @include flex(center);
+    padding: 0.5rem 0;
+    border-top: 4px solid #3e4451;
+    border-bottom: 1px solid #3e4451;
+    font-size: 0.75rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    li {
+      margin: 0 2rem;
+    }
+  }
+}
+
+.page-heading {
+  @include flex(center);
+  align-items: center;
+
+  h1 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
+}
+
+main {
+  @include flex(center);
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+
+  .headlines {
+    flex: 1;
+    max-width: 300px;
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+    }
+
+    ul {
+      margin-left: -16px;
+      padding: 0 1rem;
+
+      li {
+        border-bottom: 1px solid gray;
+        padding-bottom: 1.5rem;
+
+        &:not(:first-child) {
+          padding-top: 1.5rem;
+        }
+      }
+
+      .author {
+        @include flex(flex-start);
+        @include author;
+      }
+    }
+  }
+
+  article {
+    @include flex;
+    flex-direction: column;
+    flex: 2;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 1rem;
+
+    img {
+      justify-self: center;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      font-family: 'Times New Roman', serif;
+      justify-self: center;
+      margin: 0 auto;
+    }
+
+    .author {
+      @include flex(center);
+      @include author;
+    }
+  }
+
+  .ad {
+    flex: 1;
+    max-width: 300px;
+    line-height: 0.5rem;
+    text-align: center;
+  }
+
+  .modal-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    .modal {
+      background-color: $cpr-white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 10rem;
+      min-width: 350px;
+      max-width: 660px;
+      border-radius: $border-radius;
+
+      h1 {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 400;
+        margin-top: 0;
+      }
+
+      .form-group {
+        @include flex;
+
+        input {
+          border-top-left-radius: $border-radius;
+          border-bottom-left-radius: $border-radius;
+          border: 1px solid lightgray;
+          font-size: 1.5rem;
+          padding: 0.5rem;
+        }
+
+        button {
+          @include button;
+          border-top-right-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+          font-size: 1.5rem;
+          width: 4rem;
+        }
+      }
+    }
+  }
+}

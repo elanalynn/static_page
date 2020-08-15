@@ -1,0 +1,188 @@
+body {
+  flex-direction: column;
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #ff5a14; }
+
+ul {
+  list-style: none; }
+
+small {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600; }
+
+header .nav-first {
+  display: flex;
+  justify-content: space-between;
+  height: 42px;
+  background-color: #3e4451;
+  color: #fff; }
+  header .nav-first .hamburger {
+    margin: 0.125rem 0 0 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid #fff; }
+  header .nav-first .nav-left,
+  header .nav-first .nav-left ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700; }
+    header .nav-first .nav-left li,
+    header .nav-first .nav-left ul li {
+      padding: 0.75rem 1rem;
+      height: 100%;
+      border-right: 1px solid #fff; }
+  header .nav-first .nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header .nav-first .nav-right .search {
+      width: 2rem;
+      height: 2rem;
+      margin: 0.5rem 0.5rem 0 0; }
+    header .nav-first .nav-right button {
+      border: none;
+      background-color: #ff5a14;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      box-shadow: none;
+      height: 42px;
+      width: 132px; }
+      header .nav-first .nav-right button i {
+        margin: 0.25rem; }
+
+header .nav-second ul {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  border-top: 4px solid #3e4451;
+  border-bottom: 1px solid #3e4451;
+  font-size: 0.75rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase; }
+  header .nav-second ul li {
+    margin: 0 2rem; }
+
+.page-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .page-heading h1 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-left: 2rem; }
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  max-width: 1440px;
+  margin: auto; }
+  main .headlines {
+    flex: 1;
+    max-width: 300px; }
+    main .headlines h2 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 400; }
+    main .headlines h3 {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.25rem;
+      margin: 0.5rem 0; }
+    main .headlines ul {
+      margin-left: -16px;
+      padding: 0 1rem; }
+      main .headlines ul li {
+        border-bottom: 1px solid gray;
+        padding-bottom: 1.5rem; }
+        main .headlines ul li:not(:first-child) {
+          padding-top: 1.5rem; }
+      main .headlines ul .author {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px; }
+        main .headlines ul .author img {
+          margin-right: 0.5rem;
+          border-radius: 50%;
+          width: 2rem;
+          height: 2rem; }
+  main article {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 2;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 1rem; }
+    main article img {
+      justify-self: center;
+      margin-bottom: 1rem; }
+    main article h2 {
+      font-size: 2.25rem;
+      font-family: 'Times New Roman', serif;
+      justify-self: center;
+      margin: 0 auto; }
+    main article .author {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px; }
+      main article .author img {
+        margin-right: 0.5rem;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem; }
+  main .ad {
+    flex: 1;
+    max-width: 300px;
+    line-height: 0.5rem;
+    text-align: center; }
+  main .modal-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center; }
+    main .modal-wrapper .modal {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 10rem;
+      min-width: 350px;
+      max-width: 660px;
+      border-radius: 5px; }
+      main .modal-wrapper .modal h1 {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 400;
+        margin-top: 0; }
+      main .modal-wrapper .modal .form-group {
+        display: flex;
+        justify-content: space-between; }
+        main .modal-wrapper .modal .form-group input {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border: 1px solid lightgray;
+          font-size: 1.5rem;
+          padding: 0.5rem; }
+        main .modal-wrapper .modal .form-group button {
+          border: none;
+          background-color: #ff5a14;
+          color: #fff;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          font-size: 1.5rem;
+          width: 4rem; }

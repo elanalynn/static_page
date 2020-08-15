@@ -1,0 +1,16 @@
+{
+  "name": "cpr-static-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Elana Kopelevich",
+  "license": "MIT",
+  "scripts": {
+    "sass": "gulp sass",
+    "sass:watch": "gulp sass:watch"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
+  }
+}
