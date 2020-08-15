@@ -1,4 +1,4 @@
-# CPR Static Page with HTL/CSS (SCSS)
+# Static Page with HTML/CSS (SCSS)
 
 This is a quick static layout of the Colorado Public Radio hompage, built with HTML and SCSS.
 
